@@ -6,11 +6,11 @@
 @use "sass:string";
 @use 'parts/core';
 @use 'parts/tables';
-// @use 'parts/nav';
 @use 'parts/blocktext';
 @use 'parts/inline';
 @use 'parts/forms';
-@use 'parts/classes';
+// @use 'parts/classes';
+@use 'parts/effects';
 @use 'parts/knaxel';
 
 
@@ -70,7 +70,7 @@
   --color-yellow:       #e1da66;
   --color-aqua:         #9DFBFB;
   --color-purple:       #BF60FB;
-  
+
   --popup-blur-color:   #03050e70;
   --popup-blur:         9px;
   }

@@ -42,7 +42,9 @@ $breakpoints: (
 img{
   display: block;
 }
-
+figure{
+  padding: var(--rel-p);
+}
 @media (min-width: 960px ) {
   body > section{
     max-width: 960px;
@@ -50,15 +52,11 @@ img{
     margin-right: auto;
   }
 } 
-figure , caption, figcaption{
-  padding: var(--rel-p);
-}
 hr{
   margin-top: var(--rel-m);
   border:none;
   border-bottom:1px solid var(--color-default);
 }
-
 /*Layout**************************************************************/
 .row, header, footer{
   display: flex;
@@ -91,8 +89,6 @@ hr{
 .ten.col                    { flex-basis: 82.6666666667%; flex-grow:0;}
 .eleven.col                 { flex-basis: 91.3333333333%; flex-grow:0;}
 .twelve.col                 { flex-basis: 100%; flex-grow:0;}
-
-
 @media (min-width: 768px ) {
   .cell,.col{
     flex-basis: 0;
@@ -103,9 +99,11 @@ hr{
 .grow > *{
   flex-grow:1;
 }
-.center{
+col.center,row.center{
   justify-content:center;
   text-align: center;
+}
+.center{
   margin-right: auto;
   margin-left: auto;
 }
@@ -134,7 +132,6 @@ hr{
 .popup-full{
   background: var(--background-default);
 }
-
 .popup-corner:target{
   display:flex;
   justify-content: flex-end;
@@ -143,7 +140,6 @@ hr{
 .popup-full:target{
   display:block;
 }
-
 .popup:target{
   display:flex;
   flex-flow:column wrap;
