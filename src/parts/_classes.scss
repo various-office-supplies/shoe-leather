@@ -18,9 +18,10 @@
 	#{".pr-"+ #{$i } } {
 		padding-right: calc(#{$i}* var(--rel-p)  * var(--padding-scale));
 	}
-	#{".pa-"+ #{$i } + "> a" } {
+	#{".pa-"+ #{$i } + " > a,.pa-"+ #{$i } + " li > a" } {
 		padding: calc(#{$i}* var(--rel-p)  * var(--padding-scale));
 	}
+
 	#{".m-"+ #{$i } } {
 		margin: calc(#{$i} * var(--rel-m));
 	}
@@ -36,6 +37,9 @@
 	#{".mr-"+ #{$i } } {
 		margin-right: calc(#{$i} * var(--rel-m));
 	} 
+	#{".ma-"+ #{$i } +" *"  } {
+		margin: calc(#{$i} * var(--rel-m));
+	} 
 
 	#{ "s-"+ #{$i}  } {
 		font-size: #{$i*.5}rem;
@@ -44,8 +48,6 @@
 	#{".br-"+ #{$i } } {
 		border-radius: calc(#{$i}rem );
 	}
-}
-.m-auto{
 }
 .bold{
 	font-weight: 800;

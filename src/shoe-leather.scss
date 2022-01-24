@@ -9,69 +9,9 @@
 @use 'parts/blocktext';
 @use 'parts/inline';
 @use 'parts/forms';
-// @use 'parts/classes';
-@use 'parts/effects';
+ @use 'parts/classes';
+ @use 'parts/effects';
+@use 'parts/variables';
+
+
 @use 'parts/knaxel';
-
-
-
-//User Variables
-:root{
-  --font:               "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  --txt-size:           62.5%;
-  --padding:            2vw;
-  --margin:             2vw;
-
-  --padding-scale:      1;
-
-  --background-default: #101010;
-  --background-other:   #222;
-  --background-input:   rgb(239, 239, 239);
-
-  --color-default:      #ddd;
-  --color-other:        #834d49;
-  --color-link:         #a4ade9;
-  --color-disabled:     #363636;
-  --color-active:       #fff;
-
-  --color-black:        #000000;
-  --color-white:        #FFFFFF;
-  --color-blue:         #5967E8;
-  --color-green:        #81E45E;
-  --color-red:          #E84A4A;
-  --color-yellow:       #e1da66;
-  --color-aqua:         #9DFBFB;
-  --color-purple:       #BF60FB;
-
-  
-  --popup-blur-color:   #03050e70;
-  --popup-blur:         9px;
-
-}
-@media (prefers-color-scheme: light) {
-  :root{
-      
-  --background-default: #fff;
-  --background-other:   #222;
-  --background-input:   rgb(239, 239, 239);
-
-  --color-default:      #ddd;
-  --color-other:        #834d49;
-  --color-link:         #a4ade9;
-  --color-disabled:     #363636;
-  --color-active:       #fff;
-
-  --color-black:        #000000;
-  --color-white:        #FFFFFF;
-  --color-blue:         #5967E8;
-  --color-green:        #81E45E;
-  --color-red:          #E84A4A;
-  --color-yellow:       #e1da66;
-  --color-aqua:         #9DFBFB;
-  --color-purple:       #BF60FB;
-
-  --popup-blur-color:   #03050e70;
-  --popup-blur:         9px;
-  }
-}

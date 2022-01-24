@@ -1,11 +1,18 @@
-/************************************************************************/
-table{
-  margin: var(--rel-m);
+
+ul,ol{margin-block: unset; padding:0;}
+li{list-style: none;}
+nav li > a{
+ display:flex;
+ justify-content:center;
+}
+dl{
+  margin:0;
 }
 ol *,ul > *,dl *{ 
-  margin-top: calc(var(--rel-m) );
-  margin-left: calc(var(--rel-m) * 2);
-  margin-right: 0;
+  margin-bottom: calc(var(--rel-m) );
+  margin-left:calc(var(--rel-m) * 2);
+} 
+dd{
+
+  margin-left:calc(var(--rel-m) * 4);
 }
-dd{margin-left: calc(var(--rel-m) * 3);}
-li{list-style: none;}

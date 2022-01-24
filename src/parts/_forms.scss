@@ -32,6 +32,11 @@ select{
 }
 
 form{
+      margin-right: var(--rel-m);
+      margin-left: var(--rel-m);
+      fieldset {
+        padding:0;
+      }
   fieldset > div{
     width: 100%;
     display: flex;

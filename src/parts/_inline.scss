@@ -4,7 +4,8 @@ a{
   color: var(--color-link);
   vertical-align: middle;
 }
-pre {
+pre,samp {
+  white-space: hidden;
   overflow-x: scroll;
 }
 progress{
@@ -26,7 +27,7 @@ s{
   color: var(--color-disabled);
 }
 small{
-  font-size: .75rem;
+  font-size: 1.25rem;
 }
 
 

@@ -3,7 +3,7 @@
 	background:linear-gradient(322deg, #4b86fe, rgba(186, 74, 255, 0) 90%), linear-gradient(178deg, #008aff, rgba(0, 138, 255, 0) 70%), linear-gradient(24deg, #1b96fe, rgba(0, 255, 198, 0) 65%);
 }
 .bg-blur{
-    backdrop-filter: blur(calc(var(--rel-padding)));
+    backdrop-filter: blur(calc(var(--rel-p)));
 }
 ul.bg-glass > li,dl.bg-glass > dl,dl.bg-glass > dd,ol.bg-glass > li,button.bg-glass, a.bg-glass {
     backdrop-filter: blur(9px);
@@ -18,7 +18,7 @@ ul.bg-glass > li,dl.bg-glass > dl,dl.bg-glass > dd,ol.bg-glass > li,button.bg-gl
 
 }
 button.bg-glass{
-    padding: calc(var(--rel-padding)*3);
+    padding: calc(var(--rel-p)*3);
 }
   $black: "--color-black";
   $white: "--color-white";
