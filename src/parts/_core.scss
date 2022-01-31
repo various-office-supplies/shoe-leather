@@ -59,11 +59,11 @@ hr{
 /*Layout**************************************************************/
 .row, header, footer{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   max-width: 100%;
   width: 100%;
 }
-.col{
+.col, section{
   display: flex;
   flex-direction:column;
   box-sizing: border-box;
@@ -88,17 +88,20 @@ hr{
 .ten.col                    { flex-basis: 82.6666666667%; flex-grow:0;}
 .eleven.col                 { flex-basis: 91.3333333333%; flex-grow:0;}
 .twelve.col                 { flex-basis: 100%; flex-grow:0;}
-@media (min-width: 768px ) {
+@media (min-width: 0576px ) {
   .cell,.col{
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
+  .row{
+    flex-flow:row wrap;
+  }
 }
 .grow > *{
   flex-grow:1;
 }
-.center{
+.center, nav.center > ul, nav.center > ol, nav.center > dl{
   justify-content:center;
   text-align: center;
 }

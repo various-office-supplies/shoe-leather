@@ -3,7 +3,7 @@ input,button, textarea,option,select{
   border-radius: 0.3rem;
   border: solid 1px var(--color-default);
   color: var(--background-default);
-  background-color: var(--background-input);
+  background: var(--background-input);
   font-family:  var(--font);
   box-sizing: border-box;
   margin-right: var(--rel-m);
@@ -22,43 +22,52 @@ input[type="submit"], button{
   margin-bottom: calc(var(--rel-m) );
   width: fit-content;
   font-size: 1.5rem;
-  padding: calc(var(--rel-p) * 2);
+  padding: calc(var(--rel-p) );
 } 
 button.bg-none{
   color: var(--color-default);
-}
+} 
 select{
   font-size: 1.5rem;
 }
+label {
+  margin: var(--rel-m);
+  margin-top: calc(var(--rel-m) / 2);
+  margin-bottom: calc(var(--rel-m) / 2);
+}
 
+fieldset{
+  display: flex;
+  flex-flow:row wrap;
+  padding:0;
+}
+
+  legend * {
+    margin:0;
+  }
+form > legend{
+    padding:0;
+
+    padding-left:var(--rel-m);
+    border-bottom:1px solid var(--color-default);
+  }
 form{
-      margin-right: var(--rel-m);
-      margin-left: var(--rel-m);
-      fieldset {
-        padding:0;
-      }
-  fieldset > div{
-    width: 100%;
+  display:flex;
+  flex-flow:row wrap;
+  align-items:center;
+
+  *{
+  flex-grow:1;
+  }
+
+  div{
     display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  width: 100%;
   }
-  fieldset div{
-     label{
-      flex: 1;
-      display:flex;
-      align-items: center;
-      margin-right: var(--rel-m);
-      margin-left: var(--rel-m);
-    }
-    p{
-      position: absolute;
-      display: none;
-    }
-    input:not([type="checkbox"]), textarea{
-      flex: 1;
-      max-width: 100%;
-      resize:vertical;
-    }
-  }
+
+
 }
 
 /*Hover*****************************************************************/
@@ -76,6 +85,7 @@ button.bg-none:hover{
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(210, 210, 210);
+  background: var(--color-active);
+
 }
 

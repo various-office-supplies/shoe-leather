@@ -84,12 +84,12 @@ hr {
 /*Layout**************************************************************/
 .row, header, footer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   max-width: 100%;
   width: 100%;
 }
 
-.col {
+.col, section {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -164,18 +164,22 @@ hr {
   flex-grow: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .cell, .col {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
+  }
+
+  .row {
+    flex-flow: row wrap;
   }
 }
 .grow > * {
   flex-grow: 1;
 }
 
-.center {
+.center, nav.center > ul, nav.center > ol, nav.center > dl {
   justify-content: center;
   text-align: center;
 }
@@ -238,6 +242,10 @@ ul, ol {
 
 li {
   list-style: none;
+}
+
+nav li {
+  margin: 0;
 }
 
 nav li > a {
@@ -346,7 +354,7 @@ input, button, textarea, option, select {
   border-radius: 0.3rem;
   border: solid 1px var(--color-default);
   color: var(--background-default);
-  background-color: var(--background-input);
+  background: var(--background-input);
   font-family: var(--font);
   box-sizing: border-box;
   margin-right: var(--rel-m);
@@ -366,7 +374,7 @@ input[type=submit], button {
   margin-bottom: calc(var(--rel-m));
   width: fit-content;
   font-size: 1.5rem;
-  padding: calc(var(--rel-p) * 2);
+  padding: calc(var(--rel-p));
 }
 
 button.bg-none {
@@ -377,32 +385,41 @@ select {
   font-size: 1.5rem;
 }
 
-form {
-  margin-right: var(--rel-m);
-  margin-left: var(--rel-m);
+label {
+  margin: var(--rel-m);
+  margin-top: calc(var(--rel-m) / 2);
+  margin-bottom: calc(var(--rel-m) / 2);
 }
-form fieldset {
+
+fieldset {
+  display: flex;
+  flex-flow: row wrap;
   padding: 0;
 }
-form fieldset > div {
-  width: 100%;
-  display: flex;
+
+legend * {
+  margin: 0;
 }
-form fieldset div label {
-  flex: 1;
+
+form > legend {
+  padding: 0;
+  padding-left: var(--rel-m);
+  border-bottom: 1px solid var(--color-default);
+}
+
+form {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
-  margin-right: var(--rel-m);
-  margin-left: var(--rel-m);
 }
-form fieldset div p {
-  position: absolute;
-  display: none;
+form * {
+  flex-grow: 1;
 }
-form fieldset div input:not([type=checkbox]), form fieldset div textarea {
-  flex: 1;
+form div {
+  display: flex;
+  flex-flow: row wrap;
   max-width: 100%;
-  resize: vertical;
+  width: 100%;
 }
 
 /*Hover*****************************************************************/
@@ -419,7 +436,7 @@ button.bg-none:hover {
 }
 
 input[type=submit]:hover {
-  background-color: #d2d2d2;
+  background: var(--color-active);
 }
 
 /*   Tweaks  ***************************************************** */

@@ -1,6 +1,9 @@
 
 ul,ol{margin-block: unset; padding:0;}
 li{list-style: none;}
+nav li {
+	margin:0;
+}
 nav li > a{
  display:flex;
  justify-content:center;
